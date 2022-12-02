@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function find3rdScore(arr) {
+        for (let i = 0; i < arr.length-1; i++) {
+            for(let j = i+1; j < arr.length; j++) {
+                if(arr[i] > arr[j]) {
+                    let tmp = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tmp;
+                }
+            }
+        }
+        for (let k = 0; k < arr.length; k++) {
+         document.write(arr[k] + ',')
+        }
+        document.write('<br>');
+        document.write('Điểm thi cao thứ 3: ' + arr[arr.length - 3]);
+    }
+    let arr1 = [7, 15, 8, 11, 6, 9,20,100,200];
+    find3rdScore(arr1);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function check(str1, str2) {
+        if (str1.length > str2.length) {
+            return false
+        } else {
+            for (i = 0; i < str2.length; i++) {
+                if (str2.slice(i, i + str1.length) === str1) {
+                    //đây là hàm dùng để trích xuất một số phần tử trong mảng.
+                    return true
+                } else {
+                    return false
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
